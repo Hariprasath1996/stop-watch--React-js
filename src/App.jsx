@@ -25,8 +25,8 @@ const Counter = () => {
 
   // component created for Day , month, year
   const formatDate = (date) => {
-    const dayFormateOptions = {weekday:"long",  year:"numeric",  month:"long", day:"numeric"}
-    return date.toLocaleDateString(undefined,dayFormateOptions)
+    const dayFormateOptions = { weekday: "long", year: "numeric", month: "long", day: "numeric" }
+    return date.toLocaleDateString(undefined, dayFormateOptions)
   };
 
   return (
@@ -38,7 +38,7 @@ const Counter = () => {
             Digital _ Clock
           </h1>
           <div className="Time">
-            {formatHourWithInitialValueZero(formatHour(currentTime.getHours()))} :  {formatHourWithInitialValueZero(currentTime.getMinutes())} : {formatHourWithInitialValueZero(currentTime.getSeconds())}  
+            {formatHourWithInitialValueZero(formatHour(currentTime.getHours()))} :  {formatHourWithInitialValueZero(currentTime.getMinutes())} : {formatHourWithInitialValueZero(currentTime.getSeconds())}
             {currentTime.getHours() >= 12 ? " PM" : " AM"}
           </div>
           <div className="Date">
@@ -52,5 +52,4 @@ const Counter = () => {
   );
 }
 
-export default
-  Counter;
+export default Counter;
